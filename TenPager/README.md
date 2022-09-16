@@ -2,10 +2,12 @@
 Basta ter flakes ativado em seu configuration.nix
 descrição dos comandos:
 > $ nix develop
-> entra em um shell configurado com todos as dependencias
+
+entra em um shell configurado com todos as dependencias
 
 > $ nix build
-> compila o pdf gerando um arquivo result/document.pdf
+
+compila o pdf gerando um arquivo result/document.pdf
 
 # Para usuarios de outras distros:
 Dependencias:
@@ -37,7 +39,8 @@ Dependencias:
 
 com excessão do lualatex todos os outros devem estar incluidos em um pacote latex
 
-> No ubunto e derivados do debian:
+No ubunto e derivados do debian:
+
 > $ sudo apt install texlive-full lualatex
 
 ## Compilando:
