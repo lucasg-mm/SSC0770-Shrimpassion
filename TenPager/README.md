@@ -1,46 +1,48 @@
-LaTeX flake template
-====================
+# Para usuarios com nixos
+Basta ter flakes ativado em seu configuration.nix
+descrição dos comandos:
+> $ nix develop
+> entra em um shell configurado com todos as dependencias
 
-`LaTeX` template that I use as a starting point for all my documents. It is
-structured in multiple files ordered numerically. To compile simply
-run `latexmk`.
+> $ nix build
+> compila o pdf gerando um arquivo result/document.pdf
 
-Flakes
-------
+# Para usuarios de outras distros:
+Dependencias:
+- lualatex
+- scheme-medium
+- framed
+- titlesec
+- cleveref
+- multirow
+- wrapfig
+- tabu
+- threeparttable
+- threeparttablex
+- makecell
+- environ
+- biblatex
+- biber
+- fvextra
+- upquote
+- catchfile
+- xstring
+- csquotes
+- minted
+- dejavu
+- comment
+- footmisc
+- xltabular
+- ltablex
 
-There is no need to use `flakes`, this template can be used with any working
-`LaTeX` installation, but `flakes` allow for build reproducibility and a
-standardized environment across all collaborators. This means that all the
-`LaTeX` dependencies, `pygmentize` and all other dependencies are managed with
-`nix`, allowing to compile the document without working about managing the
-dependencies in different environments.
+com excessão do lualatex todos os outros devem estar incluidos em um pacote latex
 
-This makes it very easy to integrate the document deployment with [github
-actions](https://github.com/marketplace/actions/install-nix#usage-with-flakes),
-any other CI or [creating containers](https://nix.dev/tutorials/building-and-running-docker-images)
-to build the document. Using, binary caches with `cachix` can speed up the
-compilation significantly by caching all LaTeX packages.
+> No ubunto e derivados do debian:
+> $ sudo apt install texlive-full lualatex
 
-To build the current in the current directory run:
+## Compilando:
+Tendo todos os requisitos em sua maquina basta executar o comando:
+> $ lualatex -shell-escape *.tex
 
-```
-nix build
-```
-
-Or even compile the document without even cloning it before hand with:
-
-```
-nix build github:leixb/latex-template
-```
-
-To get a shell with all the dependencies available:
-
-```
-nix develop
-```
-
-Note that you can use [direnv](https://github.com/direnv/direnv)
-to have a controlled development environment for the document integrated
-with your shell.
-
-(All this commands are using nix 2.4 with flake support)
+Esse comando ira gerar um 000-main.pdf, o qual pode ser lido pelo seu leitor de PDF padrão
+(Caso não tenha um recomendo o zathura)
