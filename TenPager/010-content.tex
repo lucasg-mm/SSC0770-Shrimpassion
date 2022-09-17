@@ -3,36 +3,91 @@
 
 \section{Visão Geral}%
     \subsection{Tema/Contexto/Genêro}%
-    A tematica principal do jogo será a de frutos do mar, sendo usados tanto elementos biologia/vida marinha quanto de seus usos culinarios, para trazer essa ideia a vida sera usado o genero de platformer com elementos de ação, sendo um tradicional "corre e atira" 
+    \label{sec:contexto}
+    A tematica principal do jogo será a de frutos do mar, sendo usados tanto elementos biologia/vida marinha quanto de seus usos culinarios.
+    Para trazer essa ideia a vida sera usado o genero de platformer com elementos de ação, sendo um tradicional "corre e atira".\\
 
-    \subsection{Mecânica Central}%
-- Movimentação:\\
-    Andar, saltar, dash (maybe escalada ???)\\
-- Combate:\\
-    O protagonista tem 2 tipos de ataques, um melee, usando suas pinças e um ranged que é um disparo de agua, sendo esse disparo limitado a munição, agua, que o protagonista possui \\
-    (maybe upgrade de habilidades)\\
+    \subsection{Mecânicas Central}%
+    \label{sec:mecanica}
+    Como mencionado em \Cref{sec:contexto} o jogo será um "corre e atira" logo as principais mecânicas serão as de movimentação e combate.\\
+
+        \subsubsection{Movimentação}\label{sec:mecanica:movimentação}
+        A movimentação segue o esquema basico de um platformer 2D, o personagem pode se mover para a direite, esquerda e dar um salto.\\
+        Além da movimentação basica, o personagem tambem poderá realizar um dash, se impulsionando para frente, aumentando assim a mobilidade.\\
+        \subsubsection{Combate}\label{sec:mecanica:combate}
+        Já no combate, haverá 2 ataques disponiveis para o jogador:
+
+        \begin{itemize}
+          \item Um ataque a curta distância usando a pinça, o ataque percorrera uma curta faixa logo a frente do protagonista, dando dano em tudo naquela area.
+          \item Um ataque a distância, sendo um disparo de agua emitido da pinça do personagem, percorre uma distância muito maior que o ataque melee, porém causando menos dano, e que depende de munição (agua) para ser ultilizado.
+        \end{itemize}
 
     \subsection{Plataformas Alvo}%
-Inicialmente PC, windows e linux com possibilidade de expanção para consoles.
+    Inicialmente PC:
+        \begin{itemize}
+            \item Windowns
+            \item Linux
+        \end{itemize}
+    Porém com possivel expanção para consoles em caso de sucesso.
     \subsection{Público Alvo}%
-Publico jovem, gen z, que gostam de um humor nonsense (o protagonista é um CAMARÃO) mas que não abrem mão da experiencia de um bom platformer.
-    \subsection{Escopo do Projeto}%
-Tempo de desenvolvimento: aproximadamente 3 meses.
-Equipe:
-    TODO inserir lista com os nomes dos membros e cargos
-    \subsection{Influências}%
-Megaman:\\ 
-TODO inserir imagens do jogo\\
-Cup Head:\\
-TODO inserir imagens do jogo\\
+        Publico jovem, gen z, que gostam do tipo de humor nonsense, afinal o protagonista é um camarão solitario em busca de amor, mas que não abrem mão da experiencia de jogar um bom platformer.
 
-Biologia:\\
-TODO inserir imagem do camarão pistola\
+    \subsection{Escopo do Projeto}%
+    \subsubsection{Tempo de desenvolvimento}
+        De 3 a 4 meses.
+    \subsubsection{Equipe}
+        \begin{itemize}
+            \item Silmar Pereira da Silva Junior: Programação, Design, DevOps;
+            \item João Paulo Garcia Martinelli de Oliveira: programação e arquitetura dos leveis;
+            \item Lucas Gabriel Mendes Miranda: design;
+            \item Flavio Ippolito Vasini Design;
+            \item Leonardo Vinícius de Almeida: programador;
+        \end{itemize}
+
+
+
+    \subsection{Influências}%
+        \subsubsection{Megaman:}
+        \label{sec:influencias:megaman}
+            \begin{figure}[H]
+                \includegraphics[width=8cm]{Megaman}
+            \centering
+            \end{figure}
+
+        Megaman é a principal referência quanto ao gameplay, bastante da mecânica é inspirada no jogo, como mencionado na \Cref{sec:mecanica}, correr, pular e atirar são as principais atividades desenpenhadas por X (protagonista do Megaman X) e pelo camarão. Ademais, em subsequentes jogos da franquia, houve a adição de mais um personagem jogável, o Zero, que usa sua espada para causar ataques de curta distância, dos quais o golpe melee do protagonista é baseado.\\
+        Além das mecânicas de movimentação e combate, outro elemento que Megaman servira de inspiração será no level design, com fases bem projetadas para oferecer desafios ao jogador e um boss no final.\\
+
+        \subsubsection{Cuphead:}
+            \begin{figure}[H]
+                \includegraphics[width=10cm]{Cuphead}
+            \centering
+            \end{figure}
+
+            Cuphead, será a inspiração quanto ao design de personagens, cenários, inimigos e tudo relacionado ao artistico do projeto, sendo bem colorido e cartunesco.\\
+            Também vale resaltar que varias das mecânicas mencionadas em \Cref{sec:influencias:megaman} são compartilhadas com Cuphead e também serão consideradas como formas de inspiração, apesar das influencias usadas de Cuphead serem mais voltadas ao artistico e nem tanto ao gameplay.\\
+
+        \subsubsection{Biologia:}
+            \begin{figure}[H]
+                \includegraphics[width=5cm]{PistolShrimp}
+            \centering
+            \end{figure}
+
+            A especie de camarão \textit{Synalpheus fritzmuelleri} mais conhecida como camarão-pistola é a grande inspiração para o protagonista do jogo, essa especie possui uma pinça direita peculiar, que é capaz de ao fechar e precionar a agua dentro dela produz uma onda de choque que se move pela agua tão forte que é capaz de nocautear suas presas.
+ 
+        \subsubsection{CupNoodles de frutos do mar:}
+            \begin{figure}[H]
+                \includegraphics[width=10cm]{CupNoodles}
+            \centering
+            \end{figure}
+            
+            Todo CupNoodles tem acompanhamentos que vem junto do macarrão e no de frutos do mar não é diferente, mas já tentou achar um camarão nele, garantimos que há no maximo 1 por pacote, ele está lá, sozinho, apenas esperando que se ponha agua quente, espere 3 minutinhos e acabe com sua solidão.
 
     \subsection{Descrição do projeto}%
 Em um cup noodles de frutos do mar, o unico camarão desidratado do pacote, solitario e na escuridão, tenta escapar de sua prisão, para voltar ao mar em busca de seu amor.\\
 Embarque nessa jornada cheia de perigos e plataformas, usando sua poderosa pinça para esmagar inimigos que ficarem entre seu você e o amor verdadeiro, e se não ousarem chegar basta bater suas pinças para criar um pulso de agua capaz de destruir qualquer um.\\
 Nada pode parar um camarão determinado\\
+
+
     \subsection{Descrição do projeto (detalhado)}%
 TODO: detalhar a sessão anterior com um mais da lore.\\
     \subsection{Mockup das telas}%
@@ -44,6 +99,7 @@ TODO: detalhar a sessão anterior com um mais da lore.\\
     \subsection{Historia detalhada}%
 
 \section{Gameplay e fluxo de jogo}%
+TODO controles, gameplay etc
     \subsection{Gameplay breve}%
     \subsection{Gameplay detalhado}%
 
