@@ -9,6 +9,8 @@ public class MovePlayer : MonoBehaviour
     public Rigidbody2D Player;
     public Collider2D colPlayer;
     public Collider2D colCatWalk;
+	public Collider2D colCatWalk_2;
+	public Collider2D colCatWalk_3;
     public float force = 10;
     public float speed = 15;
     private bool stopJump = true;
@@ -34,7 +36,7 @@ public class MovePlayer : MonoBehaviour
             stopJump = false;
         }
 
-        if (colPlayer.IsTouching(colCatWalk))     
+        if (colPlayer.IsTouching(colCatWalk) || colPlayer.IsTouching(colCatWalk_2) || colPlayer.IsTouching(colCatWalk_3))     
         {          
             stopJump = true; 
         }
