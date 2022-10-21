@@ -17,6 +17,13 @@ public class PlayerController : MonoBehaviour {
 	public bool isGrounded = false;
 	private bool jump = false;
 
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCoolDown = 1f;
+
+    [SerializeField] private TrailRenderer tr;
 	//[HideInInspector]
 	private bool isAttacking = false;
 
@@ -25,8 +32,16 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
+        if(isDashing){
+            return;
+        }
+
 		inputCheck ();
 		move ();
+
+        if(Input.GetKeyDown(KeyCode.Z)){
+            StartCoroutine(Dash());
+        }
 	}
 
 	void inputCheck (){
@@ -87,4 +102,21 @@ public class PlayerController : MonoBehaviour {
 		myScale.x *= -1;
 		transform.localScale = myScale;
 	}
+
+    private IEnumerator Dash(){
+        canDash = false;
+        isDashing = true;
+        float ogGravity = rb2d.gravityScale;
+        rb2d.gravityScale = 0f;
+        rb2d.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+
+        tr.emitting = false;
+        rb2d.gravityScale = ogGravity;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashingCoolDown);
+        canDash = true;
+    }
 }
