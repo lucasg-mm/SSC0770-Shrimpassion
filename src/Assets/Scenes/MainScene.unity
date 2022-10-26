@@ -2920,10 +2920,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponPrefab: {fileID: 7471453021813009167, guid: a649fea528edc327ebbd9b985609fa4a, type: 3}
   pointWeapon: {fileID: 1349079120}
-  weaponSpeed: 8
+  weaponSpeed: 250
   lookingRight: 1
   isGrounded: 0
-  tr: {fileID: 0}
+  tr: {fileID: 1375384392}
 --- !u!114 &1375384391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3011,7 +3011,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.10980392, g: 0.11372549, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -3020,7 +3020,7 @@ TrailRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
+      ctime1: 51252
       ctime2: 0
       ctime3: 0
       ctime4: 0
