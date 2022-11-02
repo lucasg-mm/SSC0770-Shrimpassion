@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour {
 
-	private float startHealth = 4;
+	private float startHealth = 10;
 	public float health;
-	private float maxHealth = 4;
+	private float maxHealth = 10;
 	public float lifePoints = 3;
 
 	private bool isDamageable;
@@ -16,7 +16,7 @@ public class LifeController : MonoBehaviour {
 	public Image healthGui;
 	public Text lifePointsText;
 	
-	public AudioClip[] audioClip;
+	
 
 
 	void Start(){
