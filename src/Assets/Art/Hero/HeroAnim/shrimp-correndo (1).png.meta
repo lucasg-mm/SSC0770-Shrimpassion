@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 9ecc963de463004e085d422790779d62
+guid: e880ed03e5e2caa439cbf0d4c9112a46
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,11 +63,10 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -105,169 +104,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shrimp-Correndo_0
+      name: shrimp-correndo (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1853
-        height: 1819
-      alignment: 9
-      pivot: {x: 0.4420382, y: 0.5000001}
-      border: {x: 0, y: 0, z: 174, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d40a8ed23d7c441ba711b2117aca5b3
-      internalID: 1585809696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shrimp-Correndo_1
-      rect:
-        serializedVersion: 2
-        x: 1877
-        y: 0
-        width: 2009
-        height: 1819
+        x: 167
+        y: 4502
+        width: 1928
+        height: 1808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a65c875ba1b9aa2cba6ca385f568ed5b
-      internalID: 1036322248
+      spriteID: 65acfa92d54d96e458a88fcb40f8fd2b
+      internalID: -617840962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shrimp-Correndo_2
+      name: shrimp-correndo (1)_1
       rect:
         serializedVersion: 2
-        x: 4099
-        y: 0
-        width: 1708
-        height: 1819
+        x: 2426
+        y: 4485
+        width: 1931
+        height: 1808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b165ef6c5977a1053aaed9ed193603f9
-      internalID: 228351484
+      spriteID: b696586e3388db7418437ce0ef2e51f1
+      internalID: 1248450999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shrimp-Correndo_3
+      name: shrimp-correndo (1)_2
       rect:
         serializedVersion: 2
-        x: 5869
-        y: 0
-        width: 1790
-        height: 1819
+        x: 4993
+        y: 4485
+        width: 1623
+        height: 1808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e0ba4ba1ccdf682d95e099151120a50
-      internalID: 1339362543
+      spriteID: 28eed1899ff24fd4b8267420b0e7c1da
+      internalID: 2008956823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shrimp-Correndo_4
+      name: shrimp-correndo (1)_3
       rect:
         serializedVersion: 2
-        x: 7640
-        y: 0
-        width: 1903
-        height: 1819
+        x: 320
+        y: 2326
+        width: 1775
+        height: 1825
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 92, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ec439bf48e0c4dadbca8633c8b84c73
-      internalID: 967284830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shrimp-Correndo_5
-      rect:
-        serializedVersion: 2
-        x: 9561
-        y: 0
-        width: 2009
-        height: 1819
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd215653a134ab9ead69dde233025ef
-      internalID: -1119315808
+      spriteID: fbf0d5f6d4ac26c4f8b873adebb88bef
+      internalID: -3398677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shrimp-Correndo_6
+      name: shrimp-correndo (1)_4
       rect:
         serializedVersion: 2
-        x: 11783
-        y: 0
-        width: 1708
-        height: 1819
+        x: 2426
+        y: 2326
+        width: 1931
+        height: 1825
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0612b122b2112b95aaa1bdb2356493d
-      internalID: 484655343
+      spriteID: 071f5b5f96b40334fa69b8c63949aab1
+      internalID: 1696212145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shrimp-Correndo_7
+      name: shrimp-correndo (1)_5
       rect:
         serializedVersion: 2
-        x: 13462
-        y: 0
-        width: 1906
-        height: 1819
+        x: 4688
+        y: 2326
+        width: 1928
+        height: 1808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82b17226c512001fb9d50d1c62d0d11b
-      internalID: -1253859851
+      spriteID: 0c8ef1f00702eab468c43e4f616a4ea2
+      internalID: 317490664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp-correndo (1)_6
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 167
+        width: 1623
+        height: 1808
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b3e8f05c2a20f46adc477e5aa1d095
+      internalID: -1134437200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp-correndo (1)_7
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 167
+        width: 1878
+        height: 1825
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c147fc4cb8339c40b852ab77620deb9
+      internalID: 1965039275
       vertices: []
       indices: 
       edges: []
@@ -283,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shrimp-Correndo_3: 1339362543
-      Shrimp-Correndo_7: -1253859851
-      Shrimp-Correndo_1: 1036322248
-      Shrimp-Correndo_5: -1119315808
-      Shrimp-Correndo_0: 1585809696
-      Shrimp-Correndo_4: 967284830
-      Shrimp-Correndo_2: 228351484
-      Shrimp-Correndo_6: 484655343
+      shrimp-correndo (1)_4: 1696212145
+      shrimp-correndo (1)_0: -617840962
+      shrimp-correndo (1)_2: 2008956823
+      shrimp-correndo (1)_5: 317490664
+      shrimp-correndo (1)_6: -1134437200
+      shrimp-correndo (1)_7: 1965039275
+      shrimp-correndo (1)_1: 1248450999
+      shrimp-correndo (1)_3: -3398677
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: c4406103aed58a64e9054a29c25d407a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_0
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 8800
+        width: 1644
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b714a774d4f7a45a2c1e7c6862bd04
+      internalID: -1809591673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_1
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 8800
+        width: 1644
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b550795d62567c1438e6ecdcde6645b7
+      internalID: 1798135619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_2
+      rect:
+        serializedVersion: 2
+        x: 4157
+        y: 8800
+        width: 1648
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b732857d4f8ffbc42aad6472e82d007c
+      internalID: 1470875655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_3
+      rect:
+        serializedVersion: 2
+        x: 6148
+        y: 8800
+        width: 1644
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562a1d5c29449b5439e709dd62f46306
+      internalID: -1652676462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_4
+      rect:
+        serializedVersion: 2
+        x: 8135
+        y: 8800
+        width: 1649
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdfac221105a464081717bf0b47038f
+      internalID: 1838298659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_5
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 6639
+        width: 1644
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e3f0e24bd11a54897271634f38214c
+      internalID: -1424863482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_6
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 6639
+        width: 1644
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a076dde10a74cf438f9da2236d3bf2f
+      internalID: -1660925367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_7
+      rect:
+        serializedVersion: 2
+        x: 4157
+        y: 6639
+        width: 1648
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693a8a31e884f7e47aa9eb4154ee865a
+      internalID: 1154384846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_8
+      rect:
+        serializedVersion: 2
+        x: 6148
+        y: 6639
+        width: 1644
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a65bd9cb1f6a004789424a0d1751de6
+      internalID: -885652512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_9
+      rect:
+        serializedVersion: 2
+        x: 8135
+        y: 6639
+        width: 1649
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b0f45fb0cc7a443bf9eb2da00495e2
+      internalID: 503196060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_10
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 4483
+        width: 1644
+        height: 1829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264304bc166337d4a8816fd9a10cb6d9
+      internalID: -1966336181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_11
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 4483
+        width: 1644
+        height: 1813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cd105925ef7ac4db5f28c79d26b73f
+      internalID: 269364811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_12
+      rect:
+        serializedVersion: 2
+        x: 4140
+        y: 4483
+        width: 1665
+        height: 1813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131b00db1e837cc49be738aee61fb025
+      internalID: 29579839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_13
+      rect:
+        serializedVersion: 2
+        x: 6132
+        y: 4483
+        width: 1660
+        height: 1813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd99a9456f971d409f185bfa56de8cc
+      internalID: 1348567040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_14
+      rect:
+        serializedVersion: 2
+        x: 8119
+        y: 4483
+        width: 1665
+        height: 1813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83e7eb4e109a424f9ffb87bf1c010ba
+      internalID: -750606754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_15
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 2322
+        width: 1665
+        height: 1818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da096ea82f3a55648bf44233b0a35d42
+      internalID: -1321060592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_16
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 2322
+        width: 1644
+        height: 1818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e4d2b2ae69b92409936254254315b6
+      internalID: -1904448343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_17
+      rect:
+        serializedVersion: 2
+        x: 4157
+        y: 2322
+        width: 1648
+        height: 1818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474413d4c4efc5d44800c617cc5f8499
+      internalID: -64458160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_18
+      rect:
+        serializedVersion: 2
+        x: 6148
+        y: 2322
+        width: 1644
+        height: 1818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72101ae27f913004db6d38e5f1d9f045
+      internalID: -1704742478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_19
+      rect:
+        serializedVersion: 2
+        x: 8135
+        y: 2322
+        width: 1649
+        height: 1818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015f04e43d108e94b861f506fbe4bc4c
+      internalID: -1714734973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shrimp-Idle (2)_20
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 161
+        width: 1644
+        height: 1818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49352bc070a11ec4eb4d53d54cff3df5
+      internalID: 411085185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Shrimp-Idle (2)_20: 411085185
+      Shrimp-Idle (2)_10: -1966336181
+      Shrimp-Idle (2)_9: 503196060
+      Shrimp-Idle (2)_19: -1714734973
+      Shrimp-Idle (2)_7: 1154384846
+      Shrimp-Idle (2)_2: 1470875655
+      Shrimp-Idle (2)_6: -1660925367
+      Shrimp-Idle (2)_1: 1798135619
+      Shrimp-Idle (2)_14: -750606754
+      Shrimp-Idle (2)_17: -64458160
+      Shrimp-Idle (2)_18: -1704742478
+      Shrimp-Idle (2)_4: 1838298659
+      Shrimp-Idle (2)_0: -1809591673
+      Shrimp-Idle (2)_8: -885652512
+      Shrimp-Idle (2)_5: -1424863482
+      Shrimp-Idle (2)_11: 269364811
+      Shrimp-Idle (2)_13: 1348567040
+      Shrimp-Idle (2)_15: -1321060592
+      Shrimp-Idle (2)_3: -1652676462
+      Shrimp-Idle (2)_16: -1904448343
+      Shrimp-Idle (2)_12: 29579839
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

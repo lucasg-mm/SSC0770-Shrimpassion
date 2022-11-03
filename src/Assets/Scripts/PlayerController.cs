@@ -63,6 +63,18 @@ public class PlayerController : MonoBehaviour {
 	void move(){
 		
 		float horizontalForceButton = Input.GetAxis ("Horizontal");
+
+		if(horizontalForceButton > 0f){
+			anim.SetBool("isRunning", true);
+
+		}
+		else if(horizontalForceButton < 0f){
+			anim.SetBool("isRunning", true);
+		}
+		else{
+			anim.SetBool("isRunning", false);
+		}
+
 		rb2d.velocity = new Vector2 (horizontalForceButton * speed, rb2d.velocity.y);
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.15f, whatIsGround);
 		anim.SetFloat("speedHorizontal",Mathf.Abs(horizontalForceButton));
