@@ -27,7 +27,12 @@ public class PlayerController : MonoBehaviour {
 	//[HideInInspector]
 	private bool isAttacking = false;
 
+
+	//Animator
+	private Animator anim;
+
 	void Start () {
+		anim=GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D> ();
 	}
 	
@@ -60,7 +65,8 @@ public class PlayerController : MonoBehaviour {
 		float horizontalForceButton = Input.GetAxis ("Horizontal");
 		rb2d.velocity = new Vector2 (horizontalForceButton * speed, rb2d.velocity.y);
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.15f, whatIsGround);
-		
+		anim.SetFloat("speedHorizontal",Mathf.Abs(horizontalForceButton));
+		anim.SetBool("grounded",isGrounded);
 		if ((horizontalForceButton > 0 && !lookingRight) || (horizontalForceButton < 0 && lookingRight))
 			Flip ();
 
