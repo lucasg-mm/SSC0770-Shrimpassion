@@ -44,6 +44,7 @@
               footmisc
               xltabular
               ltablex
+              background
               ;
           })
           which
