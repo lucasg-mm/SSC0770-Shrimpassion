@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour {
 	//[HideInInspector]
 	private bool isAttacking = false;
 
+	//knockback
+	public static bool knockRight = true;
+	public static float knockForce = 0f;
 
 	//Animator
 	private Animator anim;
@@ -105,9 +108,25 @@ public class PlayerController : MonoBehaviour {
 				bullet.transform.rotation = pointWeapon.transform.rotation;
 				bullet.SetActive(true);
 				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.left * weaponSpeed);
-  			}
+  				}
 			}
 		
+		}
+		if (knockForce <= 0)
+		{
+			rb2d.velocity = new Vector2(horizontalForceButton * speed, rb2d.velocity.y);
+		}
+		else
+		{
+			if (knockRight)
+			{
+				rb2d.velocity = new Vector2(-knockForce * speed, rb2d.velocity.y);
+			}
+			else
+			{
+				rb2d.velocity = new Vector2(knockForce * speed, rb2d.velocity.y);
+			}
+			knockForce -= Time.deltaTime;
 		}
 
 		isAttacking = false;
