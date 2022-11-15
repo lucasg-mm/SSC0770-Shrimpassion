@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCoolDown = 1f;
+	private float horizontalForceButton = 0f;
 
     [SerializeField] private TrailRenderer tr;
 	//[HideInInspector]
@@ -30,6 +31,8 @@ public class PlayerController : MonoBehaviour {
 
 	//Animator
 	private Animator anim;
+
+	private enum MovementState { idle, running, jumping };
 
 	void Start () {
 		anim=GetComponent<Animator>();
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour {
 
 		inputCheck ();
 		move ();
+		updateAnimationState();
 
         if(Input.GetKeyDown(KeyCode.Z)){
             StartCoroutine(Dash());
@@ -60,20 +64,28 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void move(){
-		
-		float horizontalForceButton = Input.GetAxis ("Horizontal");
+	private void updateAnimationState(){
+		MovementState state;
 
 		if(horizontalForceButton > 0f){
-			anim.SetBool("isRunning", true);
-
+			state = MovementState.running;
 		}
 		else if(horizontalForceButton < 0f){
-			anim.SetBool("isRunning", true);
+			state = MovementState.running;
 		}
 		else{
-			anim.SetBool("isRunning", false);
+			state = MovementState.idle;
 		}
+
+		if(rb2d.velocity.y > .1f && !isGrounded){
+			state = MovementState.jumping;
+		}
+
+		anim.SetInteger("player_state", (int) state);
+	}
+
+	void move(){
+		horizontalForceButton = Input.GetAxis ("Horizontal");
 
 		rb2d.velocity = new Vector2 (horizontalForceButton * speed, rb2d.velocity.y);
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.15f, whatIsGround);
