@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 	//Animator
 	private Animator anim;
 
-	private enum MovementState { idle, running, jumping, shooting_standing };
+	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping };
 
 	void Start () {
 		anim=GetComponent<Animator>();
@@ -86,6 +86,11 @@ public class PlayerController : MonoBehaviour {
 		if (isAttacking)
 		{
 			state = MovementState.shooting_standing;
+		}
+
+		if (isAttacking && rb2d.velocity.y > .1f && !isGrounded)
+		{
+			state = MovementState.shooting_jumping;
 		}
 
 		anim.SetInteger("player_state", (int) state);
