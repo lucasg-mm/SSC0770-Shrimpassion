@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 	//Animator
 	private Animator anim;
 
-	private enum MovementState { idle, running, jumping };
+	private enum MovementState { idle, running, jumping, shooting_standing };
 
 	void Start () {
 		anim=GetComponent<Animator>();
@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour {
 
 		inputCheck ();
 		move ();
-		updateAnimationState();
 
         if(Input.GetKeyDown(KeyCode.Z)){
             StartCoroutine(Dash());
@@ -82,6 +81,11 @@ public class PlayerController : MonoBehaviour {
 
 		if(rb2d.velocity.y > .1f && !isGrounded){
 			state = MovementState.jumping;
+		}
+
+		if (isAttacking)
+		{
+			state = MovementState.shooting_standing;
 		}
 
 		anim.SetInteger("player_state", (int) state);
@@ -141,6 +145,7 @@ public class PlayerController : MonoBehaviour {
 			knockForce -= Time.deltaTime;
 		}
 
+		updateAnimationState();
 		isAttacking = false;
 	}
 
