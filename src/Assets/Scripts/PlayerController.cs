@@ -190,6 +190,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		else
 		{
+
 			if (knockRight)
 			{
 				rb2d.velocity = new Vector2(-knockForce * speed, rb2d.velocity.y);
