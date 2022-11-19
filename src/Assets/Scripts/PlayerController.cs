@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 	//Animator
 	private Animator anim;
 
-	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping };
+	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping, shooting_running };
 
 	void Start () {
 		anim=GetComponent<Animator>();
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour {
 	private void updateAnimationState(){
 		MovementState state;
 
+		// running
 		if(horizontalForceButton > 0f){
 			state = MovementState.running;
 		}
@@ -81,21 +82,31 @@ public class PlayerController : MonoBehaviour {
 			state = MovementState.running;
 		}
 		else{
+			// idle
 			state = MovementState.idle;
 		}
 
+		// jumping
 		if(rb2d.velocity.y > .1f && !isGrounded){
 			state = MovementState.jumping;
 		}
 
+		// shooting and standing
 		if (isAttacking)
 		{
 			state = MovementState.shooting_standing;
 		}
 
+		// shooting and jumping
 		if (isAttacking && rb2d.velocity.y > .1f && !isGrounded)
 		{
 			state = MovementState.shooting_jumping;
+		}
+
+		// shooting and running
+		if (isAttacking && (horizontalForceButton > 0f || horizontalForceButton < 0f))
+		{
+			state = MovementState.shooting_running;
 		}
 		//TODO animacao melee
 
