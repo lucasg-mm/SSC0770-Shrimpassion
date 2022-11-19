@@ -3,12 +3,12 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
-	public float speed = 2.4f;
-	public float jumpForce = 200;
+	public float speed = 8f;
+	public float jumpForce = 800;
 	public LayerMask whatIsGround;
 	public GameObject weaponPrefab;
 	public Transform pointWeapon;
-	public float weaponSpeed = 300;
+	public float weaponSpeed = 800;
 
 	[HideInInspector]
 	public bool lookingRight = true;
@@ -19,14 +19,15 @@ public class PlayerController : MonoBehaviour {
 
     private bool canDash = true;
     private bool isDashing = false;
-    private float dashingPower = 24f;
-    private float dashingTime = 0.2f;
+    private float dashingPower = 30f;
+    private float dashingTime = 0.25f;
     private float dashingCoolDown = 1f;
 	private float horizontalForceButton = 0f;
 
     [SerializeField] private TrailRenderer tr;
 	//[HideInInspector]
 	private bool isAttacking = false;
+	private bool isAttackingMelee = false;
 
 	//knockback
 	public static bool knockRight = true;
@@ -64,6 +65,10 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.X) && !isAttacking){
 			isAttacking = true;
 		}
+		if (Input.GetKeyDown(KeyCode.C) && !isAttackingMelee)
+		{
+			isAttackingMelee = true;
+		}
 	}
 
 	private void updateAnimationState(){
@@ -92,6 +97,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			state = MovementState.shooting_jumping;
 		}
+		//TODO animacao melee
 
 		anim.SetInteger("player_state", (int) state);
 	}
@@ -121,7 +127,7 @@ public class PlayerController : MonoBehaviour {
 				bullet.transform.rotation = pointWeapon.transform.rotation;
 				bullet.SetActive(true);
 				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.right * weaponSpeed);
-  			}
+				}
 			}else{
 				
 				if (bullet != null) {
@@ -133,6 +139,40 @@ public class PlayerController : MonoBehaviour {
 			}
 		
 		}
+		if (isAttackingMelee)
+		{
+			GameObject punch = ObjectPool.SharedInstance.GetPooledObject();
+
+
+			if (lookingRight)
+			{
+
+				if (punch != null)
+				{
+					punch.transform.position = pointWeapon.transform.position;
+					punch.transform.rotation = pointWeapon.transform.rotation;
+					punch.SetActive(true);
+					
+				}
+			}
+			else
+			{
+
+				if (punch != null)
+				{
+					punch.transform.position = pointWeapon.transform.position;
+					punch.transform.rotation = pointWeapon.transform.rotation;
+					punch.SetActive(true);
+					
+				}
+			}
+
+				//punch.SetActive(false);  TODO retirar punch da tela
+
+		}
+
+
+
 		if (knockForce <= 0)
 		{
 			rb2d.velocity = new Vector2(horizontalForceButton * speed, rb2d.velocity.y);
