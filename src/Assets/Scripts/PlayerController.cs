@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	public bool isGrounded = false;
 	private bool jump = false;
+	private bool tookDamage = false;
 
     private bool canDash = true;
     private bool isDashing = false;
@@ -198,10 +199,16 @@ public class PlayerController : MonoBehaviour {
 		if (knockForce <= 0)
 		{
 			rb2d.velocity = new Vector2(horizontalForceButton * speed, rb2d.velocity.y);
+			tookDamage = true;
 		}
 		else
-		{
-			damageSoundEffect.Play();
+		{	
+			if (tookDamage)
+			{
+				damageSoundEffect.Play();
+				tookDamage = false;
+			}
+
 			if (knockRight)
 			{
 				rb2d.velocity = new Vector2(-knockForce * speed, rb2d.velocity.y);
