@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour {
 
 	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping, shooting_running };
 
+	[SerializeField] private AudioSource jumpSoundEffect;
+	[SerializeField] private AudioSource shootSoundEffect;
+	[SerializeField] private AudioSource damageSoundEffect;
+	[SerializeField] private AudioSource dashSoundEffect;
+
 	void Start () {
 		anim=GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -123,29 +128,30 @@ public class PlayerController : MonoBehaviour {
 			Flip ();
 
 		if (jump) {
+			jumpSoundEffect.Play();
 			rb2d.AddForce(new Vector2(0, jumpForce));
 			jump = false;
 		}
 
 		if (isAttacking) {
 			GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(); 
- 			
+ 			shootSoundEffect.Play();
 
 			if (lookingRight){
 				
 				if (bullet != null) {
-				bullet.transform.position = pointWeapon.transform.position;
-				bullet.transform.rotation = pointWeapon.transform.rotation;
-				bullet.SetActive(true);
-				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.right * weaponSpeed);
+					bullet.transform.position = pointWeapon.transform.position;
+					bullet.transform.rotation = pointWeapon.transform.rotation;
+					bullet.SetActive(true);
+					bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.right * weaponSpeed);
 				}
 			}else{
 				
 				if (bullet != null) {
-				bullet.transform.position = pointWeapon.transform.position;
-				bullet.transform.rotation = pointWeapon.transform.rotation;
-				bullet.SetActive(true);
-				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.left * weaponSpeed);
+					bullet.transform.position = pointWeapon.transform.position;
+					bullet.transform.rotation = pointWeapon.transform.rotation;
+					bullet.SetActive(true);
+					bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.left * weaponSpeed);
   				}
 			}
 		
@@ -190,7 +196,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		else
 		{
-
+			damageSoundEffect.Play();
 			if (knockRight)
 			{
 				rb2d.velocity = new Vector2(-knockForce * speed, rb2d.velocity.y);
@@ -214,6 +220,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
     private IEnumerator Dash(){
+		dashSoundEffect.Play();
         canDash = false;
         isDashing = true;
         float ogGravity = rb2d.gravityScale;
