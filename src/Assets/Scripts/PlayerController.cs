@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 	//Animator
 	private Animator anim;
 
-	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping, shooting_running };
+	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping, shooting_running, dashing };
 
 	[SerializeField] private AudioSource jumpSoundEffect;
 	[SerializeField] private AudioSource shootSoundEffect;
@@ -113,9 +113,14 @@ public class PlayerController : MonoBehaviour {
 		{
 			state = MovementState.shooting_running;
 		}
+
 		//TODO animacao melee
 
 		anim.SetInteger("player_state", (int) state);
+	}
+
+	private void playDashAnimation(){
+		anim.SetInteger("player_state", (int) MovementState.dashing);
 	}
 
 	void move(){
@@ -223,6 +228,7 @@ public class PlayerController : MonoBehaviour {
 		dashSoundEffect.Play();
         canDash = false;
         isDashing = true;
+		playDashAnimation();
         float ogGravity = rb2d.gravityScale;
         rb2d.gravityScale = 0f;
         rb2d.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
