@@ -13,5 +13,7 @@ public class WeaponController : MonoBehaviour {
 	void Update () {
 		if (transform.position.x - beginPos > range || beginPos - transform.position.x > range)
 			gameObject.SetActive(false);
+		
+  				
 	}
 }

@@ -9,6 +9,12 @@ public class PlayerController : MonoBehaviour {
 	public GameObject weaponPrefab;
 	public Transform pointWeapon;
 	public float weaponSpeed = 800;
+	//attack_specs
+	public Transform attackLocation;
+	public float attackRange;
+	public float attackTime;
+	public float startTimeAttack;
+	public LayerMask enemies;
 
 	[HideInInspector]
 	public bool lookingRight = true;
@@ -139,7 +145,7 @@ public class PlayerController : MonoBehaviour {
 			jump = false;
 		}
 
-		if (isAttacking) {
+		if (isAttacking && attackTime<=0) {
 			GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(); 
  			shootSoundEffect.Play();
 
@@ -162,37 +168,13 @@ public class PlayerController : MonoBehaviour {
 			}
 		
 		}
-		if (isAttackingMelee)
+		else if (isAttackingMelee  && attackTime<=0)
 		{
-			GameObject punch = ObjectPool.SharedInstance.GetPooledObject();
-
-
-			if (lookingRight)
-			{
-
-				if (punch != null)
-				{
-					punch.transform.position = pointWeapon.transform.position;
-					punch.transform.rotation = pointWeapon.transform.rotation;
-					punch.SetActive(true);
-					
-				}
-			}
-			else
-			{
-
-				if (punch != null)
-				{
-					punch.transform.position = pointWeapon.transform.position;
-					punch.transform.rotation = pointWeapon.transform.rotation;
-					punch.SetActive(true);
-					
-				}
-			}
-
-				//punch.SetActive(false);  TODO retirar punch da tela
+			Collider2D[] damage = Physics2D.OverlapCircleAll (attackLocation.position, attackRange,enemies); 	
+			for(int i=0;i<damage.Length;i++) damage[i].SendMessage("ApplyDamage",2);
 
 		}
+		else attackTime-=Time.deltaTime;
 
 
 
@@ -222,6 +204,7 @@ public class PlayerController : MonoBehaviour {
 
 		updateAnimationState();
 		isAttacking = false;
+		isAttackingMelee = false;
 	}
 
 	void Flip(){
