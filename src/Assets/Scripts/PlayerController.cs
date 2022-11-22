@@ -9,6 +9,12 @@ public class PlayerController : MonoBehaviour {
 	public GameObject weaponPrefab;
 	public Transform pointWeapon;
 	public float weaponSpeed = 800;
+	//attack_specs
+	public Transform attackLocation;
+	public float attackRange;
+	public float attackTime;
+	public float startTimeAttack;
+	public LayerMask enemies;
 
 	[HideInInspector]
 	public bool lookingRight = true;
@@ -16,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	public bool isGrounded = false;
 	private bool jump = false;
+	private bool tookDamage = false;
 
     private bool canDash = true;
     private bool isDashing = false;
@@ -36,7 +43,12 @@ public class PlayerController : MonoBehaviour {
 	//Animator
 	private Animator anim;
 
-	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping };
+	private enum MovementState { idle, running, jumping, shooting_standing, shooting_jumping, shooting_running, dashing };
+
+	[SerializeField] private AudioSource jumpSoundEffect;
+	[SerializeField] private AudioSource shootSoundEffect;
+	[SerializeField] private AudioSource damageSoundEffect;
+	[SerializeField] private AudioSource dashSoundEffect;
 
 	void Start () {
 		anim=GetComponent<Animator>();
@@ -74,6 +86,7 @@ public class PlayerController : MonoBehaviour {
 	private void updateAnimationState(){
 		MovementState state;
 
+		// running
 		if(horizontalForceButton > 0f){
 			state = MovementState.running;
 		}
@@ -81,25 +94,40 @@ public class PlayerController : MonoBehaviour {
 			state = MovementState.running;
 		}
 		else{
+			// idle
 			state = MovementState.idle;
 		}
 
+		// jumping
 		if(rb2d.velocity.y > .1f && !isGrounded){
 			state = MovementState.jumping;
 		}
 
+		// shooting and standing
 		if (isAttacking)
 		{
 			state = MovementState.shooting_standing;
 		}
 
+		// shooting and jumping
 		if (isAttacking && rb2d.velocity.y > .1f && !isGrounded)
 		{
 			state = MovementState.shooting_jumping;
 		}
+
+		// shooting and running
+		if (isAttacking && (horizontalForceButton > 0f || horizontalForceButton < 0f))
+		{
+			state = MovementState.shooting_running;
+		}
+
 		//TODO animacao melee
 
 		anim.SetInteger("player_state", (int) state);
+	}
+
+	private void playDashAnimation(){
+		anim.SetInteger("player_state", (int) MovementState.dashing);
 	}
 
 	void move(){
@@ -112,73 +140,57 @@ public class PlayerController : MonoBehaviour {
 			Flip ();
 
 		if (jump) {
+			jumpSoundEffect.Play();
 			rb2d.AddForce(new Vector2(0, jumpForce));
 			jump = false;
 		}
 
-		if (isAttacking) {
+		if (isAttacking && attackTime<=0) {
 			GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(); 
- 			
+ 			shootSoundEffect.Play();
 
 			if (lookingRight){
 				
 				if (bullet != null) {
-				bullet.transform.position = pointWeapon.transform.position;
-				bullet.transform.rotation = pointWeapon.transform.rotation;
-				bullet.SetActive(true);
-				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.right * weaponSpeed);
+					bullet.transform.position = pointWeapon.transform.position;
+					bullet.transform.rotation = pointWeapon.transform.rotation;
+					bullet.SetActive(true);
+					bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.right * weaponSpeed);
 				}
 			}else{
 				
 				if (bullet != null) {
-				bullet.transform.position = pointWeapon.transform.position;
-				bullet.transform.rotation = pointWeapon.transform.rotation;
-				bullet.SetActive(true);
-				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.left * weaponSpeed);
+					bullet.transform.position = pointWeapon.transform.position;
+					bullet.transform.rotation = pointWeapon.transform.rotation;
+					bullet.SetActive(true);
+					bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.left * weaponSpeed);
   				}
 			}
 		
 		}
-		if (isAttackingMelee)
+		else if (isAttackingMelee  && attackTime<=0)
 		{
-			GameObject punch = ObjectPool.SharedInstance.GetPooledObject();
-
-
-			if (lookingRight)
-			{
-
-				if (punch != null)
-				{
-					punch.transform.position = pointWeapon.transform.position;
-					punch.transform.rotation = pointWeapon.transform.rotation;
-					punch.SetActive(true);
-					
-				}
-			}
-			else
-			{
-
-				if (punch != null)
-				{
-					punch.transform.position = pointWeapon.transform.position;
-					punch.transform.rotation = pointWeapon.transform.rotation;
-					punch.SetActive(true);
-					
-				}
-			}
-
-				//punch.SetActive(false);  TODO retirar punch da tela
+			Collider2D[] damage = Physics2D.OverlapCircleAll (attackLocation.position, attackRange,enemies); 	
+			for(int i=0;i<damage.Length;i++) damage[i].SendMessage("ApplyDamage",2);
 
 		}
+		else attackTime-=Time.deltaTime;
 
 
 
 		if (knockForce <= 0)
 		{
 			rb2d.velocity = new Vector2(horizontalForceButton * speed, rb2d.velocity.y);
+			tookDamage = true;
 		}
 		else
-		{
+		{	
+			if (tookDamage)
+			{
+				damageSoundEffect.Play();
+				tookDamage = false;
+			}
+
 			if (knockRight)
 			{
 				rb2d.velocity = new Vector2(-knockForce * speed, rb2d.velocity.y);
@@ -192,6 +204,7 @@ public class PlayerController : MonoBehaviour {
 
 		updateAnimationState();
 		isAttacking = false;
+		isAttackingMelee = false;
 	}
 
 	void Flip(){
@@ -202,8 +215,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
     private IEnumerator Dash(){
+		dashSoundEffect.Play();
         canDash = false;
         isDashing = true;
+		playDashAnimation();
         float ogGravity = rb2d.gravityScale;
         rb2d.gravityScale = 0f;
         rb2d.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
