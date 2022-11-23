@@ -37,7 +37,7 @@ public class LifeController : MonoBehaviour
 		audio = GetComponent<AudioSource>();
 		UpdateView();
 
-		if (SceneManager.GetActiveScene().buildIndex == 0)
+		if (SceneManager.GetActiveScene().name == "FirstStage")
 		{ //Application.loadedLevel == 1
 			health = startHealth;
 			lifePoints = startLifePoints;
