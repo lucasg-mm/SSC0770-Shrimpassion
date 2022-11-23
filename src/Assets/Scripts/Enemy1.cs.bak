@@ -100,7 +100,7 @@ public class Enemy1 : MonoBehaviour
 			}
 
 			isDamageable = false;
-			Invoke("ResetIsDamageable", 0.5f);
+			Invoke("ResetIsDamageable", 1.2f);
 		}
 	}
 

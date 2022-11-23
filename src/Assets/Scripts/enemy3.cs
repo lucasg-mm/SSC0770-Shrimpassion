@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MonoBehaviour
+public class enemy3 : MonoBehaviour
 {
 
 	public bool idle;
@@ -21,11 +21,11 @@ public class Enemy1 : MonoBehaviour
 	{
 		idle = true;
 		damage = 0;
-		speed = 0.5f;
+		speed = 0.2f;
 		rb2d = GetComponent<Rigidbody2D>();
 		//anim = GetComponent<Animator>();
 		direction = 0;
-		health = 5;
+		health = 1;
 		isDamageable = false;
 	}
 
@@ -100,7 +100,7 @@ public class Enemy1 : MonoBehaviour
 			}
 
 			isDamageable = false;
-			Invoke("ResetIsDamageable", 0.5f);
+			Invoke("ResetIsDamageable", 1.2f);
 		}
 	}
 

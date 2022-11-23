@@ -1,0 +1,331 @@
+*   [33mcommit 56c5dc08346aff5c834580fc0db083500576cba7[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment[m[33m, [m[1;31morigin/development[m[33m)[m
+[31m|[m[32m\[m  Merge: 5b96aba c90a1af
+[31m|[m [32m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[31m|[m [32m|[m Date:   Tue Nov 22 16:39:28 2022 -0300
+[31m|[m [32m|[m 
+[31m|[m [32m|[m     Merge branch 'development' of https://github.com/silmarp/SSC0770-Shrimpassion into development
+[31m|[m [32m|[m   
+[31m|[m *   [33mcommit c90a1af5be0e7e43f404d4da340c001abd3f54e6[m
+[31m|[m [33m|[m[34m\[m  Merge: 7c87ca4 34890b3
+[31m|[m [33m|[m [34m|[m Author: Silmar Pereira da Silva Junior <67292496+silmarp@users.noreply.github.com>
+[31m|[m [33m|[m [34m|[m Date:   Mon Nov 21 22:49:56 2022 -0300
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m [34m|[m     Merge branch 'refactor/scene' into development
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m * [33mcommit 34890b311e6d79dc68afdee278403223fbce2066[m
+[31m|[m [33m|[m [34m|[m Author: Silmar Pereira da Silva Junior <67292496+silmarp@users.noreply.github.com>
+[31m|[m [33m|[m [34m|[m Date:   Mon Nov 21 22:48:59 2022 -0300
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m [34m|[m     Made small level and added camera follow
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m * [33mcommit b03f6dcdd2ee83767c0fba5acbe773f560576ec0[m[33m ([m[1;31morigin/refactor/scene[m[33m)[m
+[31m|[m [33m|[m [34m|[m Author: Silmar Pereira da Silva Junior <67292496+silmarp@users.noreply.github.com>
+[31m|[m [33m|[m [34m|[m Date:   Mon Nov 21 13:24:28 2022 -0300
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m [34m|[m     Tested tileset
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m * [33mcommit 17ec67cf70c5207f0a09f70aca29afb1dbcf723f[m
+[31m|[m [33m|[m [34m|[m Author: Silmar Pereira da Silva Junior <67292496+silmarp@users.noreply.github.com>
+[31m|[m [33m|[m [34m|[m Date:   Thu Nov 17 20:43:10 2022 -0300
+[31m|[m [33m|[m [34m|[m 
+[31m|[m [33m|[m [34m|[m     reorganized mainScene in testScene
+[31m|[m [33m|[m [34m|[m 
+[31m|[m * [34m|[m [33mcommit 7c87ca407f3dee34088b48aa4cbb7eabe5959681[m
+[31m|[m [34m|[m [34m|[m Author: Joao Paulo <joao.martinelli@outlook.com.br>
+[31m|[m [34m|[m [34m|[m Date:   Sun Nov 20 20:02:24 2022 -0300
+[31m|[m [34m|[m [34m|[m 
+[31m|[m [34m|[m [34m|[m     ataque melee e cooldown nos ataques
+[31m|[m [34m|[m [34m|[m 
+[31m|[m * [34m|[m [33mcommit 98d552152a38f775f643fbed9230dabf6c3357a7[m
+[31m|[m [34m|[m [34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[31m|[m [34m|[m [34m|[m Date:   Sun Nov 20 11:09:14 2022 -0300
+[31m|[m [34m|[m [34m|[m 
+[31m|[m [34m|[m [34m|[m     Fixed damage sound effect
+[31m|[m [34m|[m [34m|[m 
+[31m|[m * [34m|[m [33mcommit 57fe4d08b6cefc97d0d4702e9103d45c6c2ca1c6[m
+[31m|[m [34m|[m [34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[31m|[m [34m|[m [34m|[m Date:   Sun Nov 20 10:46:56 2022 -0300
+[31m|[m [34m|[m [34m|[m 
+[31m|[m [34m|[m [34m|[m     Added dash animation
+[31m|[m [34m|[m [34m|[m 
+[31m|[m * [34m|[m [33mcommit d625c734c5702964621b95752bf3dd9cd5bf3152[m
+[31m|[m [34m|[m [34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[31m|[m [34m|[m [34m|[m Date:   Sun Nov 20 10:08:34 2022 -0300
+[31m|[m [34m|[m [34m|[m 
+[31m|[m [34m|[m [34m|[m     Fixed shooting standing animation
+[31m|[m [34m|[m [34m|[m 
+[31m|[m * [34m|[m [33mcommit f4379301175304920331e7bf0c5f25a3807fc1c6[m
+[31m|[m [34m|[m [34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[31m|[m [34m|[m [34m|[m Date:   Sat Nov 19 15:38:07 2022 -0300
+[31m|[m [34m|[m [34m|[m 
+[31m|[m [34m|[m [34m|[m     Fixed animations transitions
+[31m|[m [34m|[m [34m|[m 
+[31m|[m * [34m|[m [33mcommit c48ea0569e5e6ea3f327efb072e14f3681561db0[m
+[31m|[m [34m|[m [34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[31m|[m [34m|[m [34m|[m Date:   Sat Nov 19 14:49:14 2022 -0300
+[31m|[m [34m|[m [34m|[m 
+[31m|[m [34m|[m [34m|[m     Added running and shooting animation
+[31m|[m [34m|[m [34m|[m 
+* [34m|[m [34m|[m [33mcommit 5b96aba3868522c9b2a3ac5e480e5207cc652132[m
+[34m|[m[34m/[m [34m/[m  Author: Vasini25 <flavippolini@yahoo.com.br>
+[34m|[m [34m|[m   Date:   Tue Nov 22 16:07:32 2022 -0300
+[34m|[m [34m|[m   
+[34m|[m [34m|[m       pequenas melhoras]
+[34m|[m [34m|[m 
+* [34m|[m [33mcommit 96fed3a4f62f6102b34b952b5fc396cdee8ea90f[m
+[34m|[m [34m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[34m|[m [34m|[m Date:   Sat Nov 19 00:09:21 2022 -0300
+[34m|[m [34m|[m 
+[34m|[m [34m|[m     pequenas alterações estéticas + mudanças no player controller
+[34m|[m [34m|[m 
+* [34m|[m [33mcommit 1d40278ff0e0e473ff8d933e9f2978743af6c9d9[m
+[34m|[m[34m/[m  Author: Vasini25 <flavippolini@yahoo.com.br>
+[34m|[m   Date:   Fri Nov 18 21:55:24 2022 -0300
+[34m|[m   
+[34m|[m       adicionadas animações dos inimigos
+[34m|[m 
+* [33mcommit a1a9286dc5bd2ff87d588e3761ff95d899372316[m
+[34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[34m|[m Date:   Tue Nov 15 19:34:01 2022 -0300
+[34m|[m 
+[34m|[m     Added shooting jumping animation
+[34m|[m 
+* [33mcommit a2d07f89cf1aef297120441e0391ee2f8db272f9[m
+[34m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[34m|[m Date:   Tue Nov 15 17:32:37 2022 -0300
+[34m|[m 
+[34m|[m     Added shooting standing animation
+[34m|[m   
+*   [33mcommit 67fb16636a3a0b78906edde4838c3c6bb78d3bd1[m
+[35m|[m[36m\[m  Merge: 613eb45 4b59b5c
+[35m|[m [36m|[m Author: João Paulo Garcia <joao.martinelli@outlook.com.br>
+[35m|[m [36m|[m Date:   Tue Nov 15 15:59:07 2022 -0300
+[35m|[m [36m|[m 
+[35m|[m [36m|[m     Merge pull request #3 from silmarp/joaoDevelopment
+[35m|[m [36m|[m     
+[35m|[m [36m|[m     verificado
+[35m|[m [36m|[m 
+[35m|[m * [33mcommit 4b59b5cc07734f1adadb5b95015809a47fda7aed[m[33m ([m[1;31morigin/joaoDevelopment[m[33m)[m
+[35m|[m [36m|[m Author: Joao <joao.martinelli@outlook.com.br>
+[35m|[m [36m|[m Date:   Mon Nov 14 16:34:37 2022 -0300
+[35m|[m [36m|[m 
+[35m|[m [36m|[m     verificar depois para merge ao development
+[35m|[m [36m|[m 
+* [36m|[m [33mcommit 613eb458fb4938ffe1e7aa21ceb76c12ffcff54f[m
+[36m|[m[36m/[m  Author: Lucas Miranda <lucasgmm@usp.br>
+[36m|[m   Date:   Tue Nov 15 15:19:56 2022 -0300
+[36m|[m   
+[36m|[m       Added jumping animation
+[36m|[m 
+* [33mcommit 3aea5f7f0883bbbaf5b777da69e583d31dcc5345[m
+[36m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[36m|[m Date:   Fri Nov 4 10:26:07 2022 -0300
+[36m|[m 
+[36m|[m     arrumando o codigo da animação de corrida
+[36m|[m 
+* [33mcommit f45b63b251f96ec53625bb2d0acb781c0bb3c854[m
+[36m|[m Author: Silmar <silmarjr2@gmail.com>
+[36m|[m Date:   Thu Nov 3 23:04:34 2022 -0300
+[36m|[m 
+[36m|[m     updated Ten Pager
+[36m|[m 
+* [33mcommit 64878db4f1297aadbe17ba853af74537d63a827c[m
+[36m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[36m|[m Date:   Thu Nov 3 20:10:54 2022 -0300
+[36m|[m 
+[36m|[m     Added idle animation and slowed down running animation
+[36m|[m 
+* [33mcommit 77e9e50b1c9a929a07a7e54b26ca13a6fa8bce16[m
+[36m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[36m|[m Date:   Thu Nov 3 11:31:07 2022 -0300
+[36m|[m 
+[36m|[m     animação de correr e de iddle
+[36m|[m 
+* [33mcommit 6ff5cb2dbdb34a036c8414cb9a7a943bf7d8aa55[m
+[36m|[m Author: Lucas Miranda <lucasgmm@usp.br>
+[36m|[m Date:   Wed Nov 2 19:03:24 2022 -0300
+[36m|[m 
+[36m|[m     Added idle and running spritesheets for main character
+[36m|[m 
+* [33mcommit d45f8994f0aa4043bc44c2205731b71da15ebcc6[m
+[36m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[36m|[m Date:   Wed Nov 2 17:53:46 2022 -0300
+[36m|[m 
+[36m|[m     vida e damage
+[36m|[m 
+* [33mcommit a9b960c32a63d3343cc9cf6150e410bddcb25d1c[m
+[36m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[36m|[m Date:   Wed Nov 2 17:38:19 2022 -0300
+[36m|[m 
+[36m|[m     vida e damage
+[36m|[m 
+* [33mcommit 5f9fa577b32c872e11c453d8df797310140fe83c[m
+[36m|[m Author: Silmar <silmarjr2@gmail.com>
+[36m|[m Date:   Wed Oct 26 16:26:08 2022 -0300
+[36m|[m 
+[36m|[m     minor ajustments
+[36m|[m 
+* [33mcommit 80a0376135e747970979f182d00ecdb6392d82f9[m
+[36m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[36m|[m Date:   Fri Oct 21 11:00:23 2022 -0300
+[36m|[m 
+[36m|[m     aguardando o trailrenderer
+[36m|[m 
+* [33mcommit 728f2d95386b9e89a58203dbd3b704dc04f1d4bf[m
+[36m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[36m|[m Date:   Fri Oct 21 10:46:04 2022 -0300
+[36m|[m 
+[36m|[m     jogo pos print
+[36m|[m   
+*   [33mcommit 6fd2c6d2481f7fccd2e4163d139882e136cd1611[m
+[1;31m|[m[1;32m\[m  Merge: 21c43bc c761333
+[1;31m|[m [1;32m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[1;31m|[m [1;32m|[m Date:   Fri Oct 21 09:52:37 2022 -0300
+[1;31m|[m [1;32m|[m 
+[1;31m|[m [1;32m|[m     merge issues
+[1;31m|[m [1;32m|[m 
+[1;31m|[m * [33mcommit c7613338ee0fef66c6ced3e2e5510fe241ab21fa[m
+[1;31m|[m [1;32m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;31m|[m [1;32m|[m Date:   Fri Oct 21 01:11:51 2022 -0300
+[1;31m|[m [1;32m|[m 
+[1;31m|[m [1;32m|[m     added trail renderer, created dash corroutine
+[1;31m|[m [1;32m|[m 
+* [1;32m|[m [33mcommit 21c43bcdc8c9a6b27660e2ed06ef2283c9468d3d[m
+[1;32m|[m[1;32m/[m  Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[1;32m|[m   Date:   Fri Oct 21 09:49:50 2022 -0300
+[1;32m|[m   
+[1;32m|[m       cena com ui
+[1;32m|[m   
+*   [33mcommit 2a011699bce91b835c279632bbd04dcb9afa5cae[m
+[1;33m|[m[1;34m\[m  Merge: 5d67fbc 2641c6e
+[1;33m|[m [1;34m|[m Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[1;33m|[m [1;34m|[m Date:   Thu Oct 20 15:49:22 2022 -0300
+[1;33m|[m [1;34m|[m 
+[1;33m|[m [1;34m|[m     adicionei o object pool e os disparos
+[1;33m|[m [1;34m|[m 
+[1;33m|[m * [33mcommit 2641c6e90ddd12185841e60b2363598a8451e1d8[m
+[1;33m|[m [1;34m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;33m|[m [1;34m|[m Date:   Thu Oct 20 15:38:38 2022 -0300
+[1;33m|[m [1;34m|[m 
+[1;33m|[m [1;34m|[m     fix de rotation of the images
+[1;33m|[m [1;34m|[m 
+[1;33m|[m * [33mcommit 7157ec6ec24269347809afb94f9da4c9e4dafcd7[m
+[1;33m|[m [1;34m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;33m|[m [1;34m|[m Date:   Thu Oct 20 15:27:05 2022 -0300
+[1;33m|[m [1;34m|[m 
+[1;33m|[m [1;34m|[m     first level backgrouds
+[1;33m|[m [1;34m|[m   
+[1;33m|[m *   [33mcommit 7db215029cf09344ddcce3cb00a8db3bfe709c14[m
+[1;33m|[m [1;35m|[m[1;36m\[m  Merge: 4161f7d e2157f1
+[1;33m|[m [1;35m|[m [1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;33m|[m [1;35m|[m [1;36m|[m Date:   Thu Oct 20 11:18:36 2022 -0300
+[1;33m|[m [1;35m|[m [1;36m|[m 
+[1;33m|[m [1;35m|[m [1;36m|[m     Merge branch 'development' of https://github.com/silmarp/SSC0770-Shrimpassion into development
+[1;33m|[m [1;35m|[m [1;36m|[m 
+[1;33m|[m [1;35m|[m * [33mcommit e2157f1d92402f9fa2ad5f0ff3d556a1142bf2ac[m
+[1;33m|[m [1;35m|[m [1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;33m|[m [1;35m|[m [1;36m|[m Date:   Thu Oct 20 11:01:03 2022 -0300
+[1;33m|[m [1;35m|[m [1;36m|[m 
+[1;33m|[m [1;35m|[m [1;36m|[m     upload all new images + new folders to de src code
+[1;33m|[m [1;35m|[m [1;36m|[m 
+[1;33m|[m * [1;36m|[m [33mcommit 4161f7de39a3b5c113127d8ba750e68a2ecec752[m
+[1;33m|[m [1;36m|[m[1;36m/[m  Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;33m|[m [1;36m|[m   Date:   Thu Oct 20 11:18:31 2022 -0300
+[1;33m|[m [1;36m|[m   
+[1;33m|[m [1;36m|[m       uploaded src ad images folders
+[1;33m|[m [1;36m|[m 
+* [1;36m|[m [33mcommit 5d67fbc74ea8bc3a2bc9296f1c9e012a20536713[m
+[1;36m|[m[1;36m/[m  Author: João Paulo Garcia Martinelli de Oliveira <joao.martinelli@outlook.com.br>
+[1;36m|[m   Date:   Thu Oct 20 14:59:28 2022 -0300
+[1;36m|[m   
+[1;36m|[m       adicionei o object pool e os disparos
+[1;36m|[m 
+* [33mcommit e5f254101365547947cc112cafaa8e48cb98f090[m
+[1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;36m|[m Date:   Wed Oct 19 18:38:22 2022 -0300
+[1;36m|[m 
+[1;36m|[m     New changes for the pitch presentation + inserting some arts
+[1;36m|[m 
+* [33mcommit 68cc6ad3c8e4c38bacbd5596db72b7433b6da3ba[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Mon Oct 17 02:15:31 2022 -0300
+[1;36m|[m 
+[1;36m|[m     Started project structure, added git ignore
+[1;36m|[m 
+* [33mcommit e795adbb04e8e101410bb670e871b9da098e9dc4[m
+[1;36m|[m Author: AleLocci <alelocci@ime.usp.br>
+[1;36m|[m Date:   Sat Oct 15 16:38:53 2022 -0300
+[1;36m|[m 
+[1;36m|[m     Inicio do projeto
+[1;36m|[m 
+* [33mcommit 2fec5924e6db32e560a4e10ae263f7a6eeb0e636[m
+[1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;36m|[m Date:   Fri Oct 7 22:50:31 2022 -0300
+[1;36m|[m 
+[1;36m|[m     Updating Descritive README of the one sheet folder
+[1;36m|[m 
+* [33mcommit 62dade11c241aa222466850e83b288602dbb6539[m
+[1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;36m|[m Date:   Fri Oct 7 22:47:24 2022 -0300
+[1;36m|[m 
+[1;36m|[m     newer version of One Sheet jpg format
+[1;36m|[m 
+* [33mcommit b992ce3900b88c1170b4b28d066bad98c6227246[m
+[1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;36m|[m Date:   Sat Sep 17 15:48:12 2022 -0300
+[1;36m|[m 
+[1;36m|[m     OneSheet em pdf
+[1;36m|[m 
+* [33mcommit 2159422541b2f5fa68beb924e065d4ad7710a7cb[m
+[1;36m|[m Author: Vasini25 <flavippolini@yahoo.com.br>
+[1;36m|[m Date:   Sat Sep 17 15:34:24 2022 -0300
+[1;36m|[m 
+[1;36m|[m     Imagens iniciais e conceitos
+[1;36m|[m 
+* [33mcommit 25d94da4443996527e659b78c2ce0375a0209545[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Sat Sep 17 14:44:25 2022 -0300
+[1;36m|[m 
+[1;36m|[m     ten pager final version
+[1;36m|[m 
+* [33mcommit 66bd2a8de43f20f6aa34b4a84faf357564a0aeae[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Fri Sep 16 21:33:26 2022 -0300
+[1;36m|[m 
+[1;36m|[m     most of it complete
+[1;36m|[m 
+* [33mcommit ad1ee44eb06506ecd99b81f1c98e0527a3e43572[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Fri Sep 16 16:18:46 2022 -0300
+[1;36m|[m 
+[1;36m|[m     complemented content
+[1;36m|[m 
+* [33mcommit 59a0aa7d7284e7e16308ea27abf154cf2468110f[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Fri Sep 16 09:46:20 2022 -0300
+[1;36m|[m 
+[1;36m|[m     docs: minor fixes in README
+[1;36m|[m 
+* [33mcommit c110a8c5002b92053fd3f6bdf1a68b9a2dd867ec[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Fri Sep 16 00:36:04 2022 -0300
+[1;36m|[m 
+[1;36m|[m     started ten pager, written compiling instructions in README
+[1;36m|[m 
+* [33mcommit b2c9871f8f9a9719b6f464087fcd1aac1b832dfa[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Wed Sep 14 14:06:22 2022 -0300
+[1;36m|[m 
+[1;36m|[m     feature: changed folder structure, added base template
+[1;36m|[m 
+* [33mcommit a86947ccba0fd7f65619419aedce3698c65b14e2[m
+[1;36m|[m Author: Silmar <silmarjr2@gmail.com>
+[1;36m|[m Date:   Sun Sep 11 15:29:27 2022 -0300
+[1;36m|[m 
+[1;36m|[m     started folder project folder structure
+[1;36m|[m 
+* [33mcommit 3201bb6dc9400183969bf817dc71449157625ce4[m[33m ([m[1;32mmain[m[33m)[m
+  Author: Silmar Pereira da Silva Junior <67292496+silmarp@users.noreply.github.com>
+  Date:   Fri Aug 26 21:44:27 2022 -0300
+  
+      Initial commit

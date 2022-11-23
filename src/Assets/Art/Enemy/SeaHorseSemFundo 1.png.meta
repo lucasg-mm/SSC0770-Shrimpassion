@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cedf747c8b9cb8844aac627c59c3ffc0
+guid: a53d17525c1758e44aa53f7c3eafeb0f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,7 +103,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SeaHorse_swimming
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 752
+        width: 332
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201e982ae9e4ad24e850e164b2a885d2
+      internalID: -90673447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaHorseSemFundo 1_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 752
+        width: 332
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2e5374dbf886144875cc7891db7146
+      internalID: 2130595994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaHorseSemFundo 1_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 752
+        width: 332
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddea0f6ff5e6094ab9dfd40c57af413
+      internalID: 284593358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaHorseSemFundo 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 332
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d256f960580243a418a0e1fa763c6f4e
+      internalID: -2071476642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaHorseSemFundo 1_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 332
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5c17603a232ab449e63ff5dd0d06c3
+      internalID: 82407997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +219,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SeaHorseSemFundo 1_3: -2071476642
+      SeaHorseSemFundo 1_4: 82407997
+      SeaHorseSemFundo 1_1: 2130595994
+      SeaHorse_swimming: -90673447
+      SeaHorseSemFundo 1_2: 284593358
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
