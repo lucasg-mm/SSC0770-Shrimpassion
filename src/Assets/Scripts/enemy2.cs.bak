@@ -6,7 +6,9 @@ using System.Diagnostics;
 
 public class enemy2 : MonoBehaviour
 {
-	public int contador = 0;
+	public float contParado = 0;
+	public float contador = 0f;
+	public float pi=3f;
 	public double acceleration = 0;
 	public bool idle;
 	public float damage;
@@ -16,7 +18,9 @@ public class enemy2 : MonoBehaviour
 	private Animator anim;
 	public float health;
 	private bool walking;
-
+	public Transform groundLocation;
+	public LayerMask Ground;
+	
 	private bool isDamageable;
 	public GameObject explosionEffect;
 	
@@ -24,10 +28,12 @@ public class enemy2 : MonoBehaviour
 	public Collider2D colSeahorse;
     public Collider2D colCatWalk;
 	public float walkForce;
+	private bool trava;
 
 	// Use this for initialization
 	void Start()
 	{
+		trava=false;
 		idle = true;
 		damage = 0;
 		speed = 0.2f;
@@ -38,14 +44,16 @@ public class enemy2 : MonoBehaviour
 		isDamageable = false;
 		walking = false;
 		walkForce = 1f;
+
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		contador ++;
-		acceleration = contador%3 - 1;
-		acceleration = Math.Sin(acceleration);
+		if(Input.GetKeyDown(KeyCode.anyKey) && !Input.GetKeyDown(KeyCode.Mouse1)) trava=true;
+		contador=(contador+1)%100;
+		//acceleration = contador%3 - 1;
+		acceleration = Math.Sin(contador);
 		//anim.SetBool("isIdle", idle);
 		rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
 		//if (!idle)
@@ -53,12 +61,16 @@ public class enemy2 : MonoBehaviour
 			isDamageable = true;
 		//}
 		
-		if (colSeahorse.IsTouching(colCatWalk))     
-        {
-			seahorse.AddForce(Vector2.left * acceleration, (ForceMode2D)ForceMode.Acceleration);
-			walking = true;
-			Invoke("walkCoolDown", 1.9f);
+		contParado++;
+		if(trava==true){
+		if (Physics2D.OverlapCircle (groundLocation.position, 0.5f, Ground) && contador < 25)     
+        {	
+			seahorse.AddForce(Vector2.left * 25, (ForceMode2D)ForceMode.Impulse);
         }
+		//else seahorse.AddForce(Vector2.right * 10, (ForceMode2D)ForceMode.Impulse);
+			
+		//else 	seahorse.AddForce(Vector2.left * 0.75f, (ForceMode2D)ForceMode.Acceleration);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
