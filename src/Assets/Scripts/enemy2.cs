@@ -50,7 +50,7 @@ public class enemy2 : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(Input.anyKey && !Input.GetKeyDown(KeyCode.Mouse1)) trava=true;
+		if(Input.anyKey) trava=true;
 		contador=(contador+1)%100;
 		//acceleration = contador%3 - 1;
 		acceleration = Math.Sin(contador);

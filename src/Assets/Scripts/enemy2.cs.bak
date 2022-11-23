@@ -29,11 +29,13 @@ public class enemy2 : MonoBehaviour
     public Collider2D colCatWalk;
 	public float walkForce;
 	private bool trava;
+	private bool trava1;
 
 	// Use this for initialization
 	void Start()
 	{
 		trava=false;
+		trava1=false;
 		idle = true;
 		damage = 0;
 		speed = 0.2f;
@@ -50,7 +52,8 @@ public class enemy2 : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.anyKey) && !Input.GetKeyDown(KeyCode.Mouse1)) trava=true;
+		if(Input.anyKey) trava1=true;
+		else if(Input.anyKey&&trava1==true) trava = true;
 		contador=(contador+1)%100;
 		//acceleration = contador%3 - 1;
 		acceleration = Math.Sin(contador);
