@@ -49,7 +49,7 @@ public class enemy2 : MonoBehaviour
 		
 		if (colSeahorse.IsTouching(colCatWalk) && !walking)     
         {
-			seahorse.AddForce(Vector2.left * walkForce, (ForceMode2D)ForceMode.Force);
+			seahorse.AddForce(Vector2.left * walkForce, (ForceMode2D)ForceMode.Acceleration);
 			walking = true;
 			Invoke("walkCoolDown", 1.9f);
         }
