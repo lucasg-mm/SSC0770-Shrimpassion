@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Diagnostics;
 
 public class enemy2 : MonoBehaviour
 {
-
+	public int contador = 0;
+	public double acceleration = 0;
 	public bool idle;
 	public float damage;
 	public float speed;
@@ -34,12 +37,15 @@ public class enemy2 : MonoBehaviour
 		health = 2;
 		isDamageable = false;
 		walking = false;
-		walkForce = 10f;
+		walkForce = 1f;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		contador ++;
+		acceleration = contador%3 - 1;
+		acceleration = Math.Sin(acceleration);
 		//anim.SetBool("isIdle", idle);
 		rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
 		//if (!idle)
@@ -47,9 +53,9 @@ public class enemy2 : MonoBehaviour
 			isDamageable = true;
 		//}
 		
-		if (colSeahorse.IsTouching(colCatWalk) && !walking)     
+		if (colSeahorse.IsTouching(colCatWalk))     
         {
-			seahorse.AddForce(Vector2.left * walkForce, (ForceMode2D)ForceMode.Acceleration);
+			seahorse.AddForce(Vector2.left * acceleration, (ForceMode2D)ForceMode.Acceleration);
 			walking = true;
 			Invoke("walkCoolDown", 1.9f);
         }

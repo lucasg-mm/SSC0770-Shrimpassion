@@ -1974,7 +1974,7 @@ GameObject:
   - component: {fileID: 597725352}
   - component: {fileID: 597725351}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   pointWeapon: {fileID: 1349079120}
   weaponSpeed: 250
   attackLocation: {fileID: 1349079120}
-  attackRange: 5
+  attackRange: 0.5
   attackTime: 3
   startTimeAttack: 0
   enemies:

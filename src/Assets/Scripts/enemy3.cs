@@ -13,6 +13,9 @@ public class enemy3 : MonoBehaviour
 	private Animator anim;
 	public float health;
 	private Vector3 vec;
+	public Transform groundLocation;
+	public LayerMask Ground;
+	public bool grounded;
 	
 	private bool jumping;
 	public Rigidbody2D seastar;
@@ -41,23 +44,31 @@ public class enemy3 : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		vec = transform.localPosition;
 		//jumping = false;
 		//anim.SetBool("isIdle", idle);
-		rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
+		//rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
 		//if (!idle)
 		//{
 			isDamageable = true;
 		//}
 		
 		//Para a estrela do mar pular
-		if (colSeastar.IsTouching(colCatWalk) && !jumping)     
+		if (!jumping)     
         {
-			seastar.AddForce(Vector3.up * jumpForce, (ForceMode2D)ForceMode.Impulse);
-			//seastar.AddForce(Vector3.left * jumpForce, (ForceMode2D)ForceMode.Impulse);  <-- BUG
+			grounded = Physics2D.OverlapCircle (groundLocation.position, 0.5f, Ground);
+			//seastar.AddForce(Vector3.left * jumpForce, (ForceMode2D)ForceMode.Impulse);
 			//anim.SetBool("jumping",jumping);
+			
+			if(grounded)
+			{
+				seastar.AddForce(Vector2.up * jumpForce, (ForceMode2D)ForceMode.Impulse);
+				//seastar.AddForce(transform.left * 1f, (ForceMode2D)ForceMode.Impulse);
+			}
             jumping = true; 
 			Invoke("jumpCoolDown", 2f);
         }
+		transform.localPosition = vec;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
