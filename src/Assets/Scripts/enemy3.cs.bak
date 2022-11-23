@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy2 : MonoBehaviour
+public class enemy3 : MonoBehaviour
 {
-
+	private float jumpForce;
 	public bool idle;
 	public float damage;
 	public float speed;
@@ -12,15 +12,15 @@ public class enemy2 : MonoBehaviour
 	private float direction;
 	private Animator anim;
 	public float health;
-	private bool walking;
+	private Vector3 vec;
+	
+	private bool jumping;
+	public Rigidbody2D seastar;
+	public Collider2D colSeastar;
+    public Collider2D colCatWalk;
 
 	private bool isDamageable;
 	public GameObject explosionEffect;
-	
-	public Rigidbody2D seahorse;
-	public Collider2D colSeahorse;
-    public Collider2D colCatWalk;
-	public float walkForce;
 
 	// Use this for initialization
 	void Start()
@@ -31,15 +31,17 @@ public class enemy2 : MonoBehaviour
 		rb2d = GetComponent<Rigidbody2D>();
 		//anim = GetComponent<Animator>();
 		direction = 0;
-		health = 2;
+		health = 1;
 		isDamageable = false;
-		walking = false;
-		walkForce = 10f;
+		jumping = false;
+		jumpForce = 9f;
+		vec = transform.localPosition;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		//jumping = false;
 		//anim.SetBool("isIdle", idle);
 		rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
 		//if (!idle)
@@ -47,11 +49,14 @@ public class enemy2 : MonoBehaviour
 			isDamageable = true;
 		//}
 		
-		if (colSeahorse.IsTouching(colCatWalk) && !walking)     
+		//Para a estrela do mar pular
+		if (colSeastar.IsTouching(colCatWalk) && !jumping)     
         {
-			seahorse.AddForce(Vector2.left * walkForce, (ForceMode2D)ForceMode.Force);
-			walking = true;
-			Invoke("walkCoolDown", 1.9f);
+			seastar.AddForce(Vector3.up * jumpForce, (ForceMode2D)ForceMode.Impulse);
+			//seastar.AddForce(Vector3.left * jumpForce, (ForceMode2D)ForceMode.Impulse);  <-- BUG
+			//anim.SetBool("jumping",jumping);
+            jumping = true; 
+			Invoke("jumpCoolDown", 1.9f);
         }
 	}
 
@@ -138,8 +143,8 @@ public class enemy2 : MonoBehaviour
 		GetComponent<Renderer>().enabled = true;
 	}
 	
-	public void walkCoolDown()
+	void jumpCoolDown()
 	{
-		walking = false;
+		jumping = false;
 	}
 }

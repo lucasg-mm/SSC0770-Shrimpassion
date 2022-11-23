@@ -12,9 +12,15 @@ public class enemy2 : MonoBehaviour
 	private float direction;
 	private Animator anim;
 	public float health;
+	private bool walking;
 
 	private bool isDamageable;
 	public GameObject explosionEffect;
+	
+	public Rigidbody2D seahorse;
+	public Collider2D colSeahorse;
+    public Collider2D colCatWalk;
+	public float walkForce;
 
 	// Use this for initialization
 	void Start()
@@ -27,6 +33,8 @@ public class enemy2 : MonoBehaviour
 		direction = 0;
 		health = 2;
 		isDamageable = false;
+		walking = false;
+		walkForce = 10f;
 	}
 
 	// Update is called once per frame
@@ -38,6 +46,13 @@ public class enemy2 : MonoBehaviour
 		//{
 			isDamageable = true;
 		//}
+		
+		if (colSeahorse.IsTouching(colCatWalk) && !walking)     
+        {
+			seahorse.AddForce(Vector2.left * walkForce, (ForceMode2D)ForceMode.Acceleration);
+			walking = true;
+			Invoke("walkCoolDown", 1.9f);
+        }
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -121,5 +136,10 @@ public class enemy2 : MonoBehaviour
 			i++;
 		}
 		GetComponent<Renderer>().enabled = true;
+	}
+	
+	public void walkCoolDown()
+	{
+		walking = false;
 	}
 }

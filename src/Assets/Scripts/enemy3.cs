@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy3 : MonoBehaviour
 {
-
+	private float jumpForce;
 	public bool idle;
 	public float damage;
 	public float speed;
@@ -12,6 +12,12 @@ public class enemy3 : MonoBehaviour
 	private float direction;
 	private Animator anim;
 	public float health;
+	private Vector3 vec;
+	
+	private bool jumping;
+	public Rigidbody2D seastar;
+	public Collider2D colSeastar;
+    public Collider2D colCatWalk;
 
 	private bool isDamageable;
 	public GameObject explosionEffect;
@@ -27,17 +33,31 @@ public class enemy3 : MonoBehaviour
 		direction = 0;
 		health = 1;
 		isDamageable = false;
+		jumping = false;
+		jumpForce = 9.5f;
+		vec = transform.localPosition;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		//jumping = false;
 		//anim.SetBool("isIdle", idle);
 		rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
 		//if (!idle)
 		//{
 			isDamageable = true;
 		//}
+		
+		//Para a estrela do mar pular
+		if (colSeastar.IsTouching(colCatWalk) && !jumping)     
+        {
+			seastar.AddForce(Vector3.up * jumpForce, (ForceMode2D)ForceMode.Impulse);
+			//seastar.AddForce(Vector3.left * jumpForce, (ForceMode2D)ForceMode.Impulse);  <-- BUG
+			//anim.SetBool("jumping",jumping);
+            jumping = true; 
+			Invoke("jumpCoolDown", 2f);
+        }
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -121,5 +141,10 @@ public class enemy3 : MonoBehaviour
 			i++;
 		}
 		GetComponent<Renderer>().enabled = true;
+	}
+	
+	void jumpCoolDown()
+	{
+		jumping = false;
 	}
 }
