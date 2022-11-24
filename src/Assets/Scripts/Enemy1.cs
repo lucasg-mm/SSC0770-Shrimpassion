@@ -12,9 +12,13 @@ public class Enemy1 : MonoBehaviour
 	private float direction;
 	private Animator anim;
 	public float health;
-
+	private int contador;
+	private bool attacking;
 	private bool isDamageable;
 	public GameObject explosionEffect;
+	public GameObject weaponPrefab;
+	public Transform pointWeapon;
+	public float weaponSpeed = 2000;
 
 	// Use this for initialization
 	void Start()
@@ -27,6 +31,8 @@ public class Enemy1 : MonoBehaviour
 		direction = 0;
 		health = 5;
 		isDamageable = false;
+		contador=1;
+		attacking=false;
 	}
 
 	// Update is called once per frame
@@ -38,6 +44,22 @@ public class Enemy1 : MonoBehaviour
 		//{
 			isDamageable = true;
 		//}
+		contador++;
+		if(contador%20==1) attacking=true;
+		if(attacking==true){
+			GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(); 
+ 			
+			
+				
+			if (bullet != null) {
+				bullet.transform.position = pointWeapon.transform.position; 
+				bullet.transform.rotation = pointWeapon.transform.rotation;
+				bullet.SetActive(true);
+				bullet.GetComponent<Rigidbody2D>().AddForce(Vector3.left * weaponSpeed);
+			}
+			attacking=false;
+		
+		
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -122,4 +144,4 @@ public class Enemy1 : MonoBehaviour
 		}
 		GetComponent<Renderer>().enabled = true;
 	}
-}
+}}
