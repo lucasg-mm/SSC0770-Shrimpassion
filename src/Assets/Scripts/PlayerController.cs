@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public GameObject weaponPrefab;
 	public Transform pointWeapon;
-	public float weaponSpeed = 800;
+	public float weaponSpeed = 2000;
 	//attack_specs
 	public Transform attackLocation;
 	public float attackRange;

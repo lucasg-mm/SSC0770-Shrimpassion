@@ -4,7 +4,7 @@ using System.Collections;
 public class WeaponController : MonoBehaviour {
 
 	private float beginPos;
-	private float range = 100f;
+	private float range = 20f;
 
 	void Start () {
 	
@@ -13,5 +13,7 @@ public class WeaponController : MonoBehaviour {
 	void Update () {
 		if (transform.position.x - beginPos > range || beginPos - transform.position.x > range)
 			gameObject.SetActive(false);
+		
+  				
 	}
 }
