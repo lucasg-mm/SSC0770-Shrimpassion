@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class LifeController : MonoBehaviour
 {
 
-	private float startHealth;
+	private float startHealth = 4;
 	public float health;
-	private float maxHealth;
-	public float lifePoints;
+	private float maxHealth = 4;
+	public float lifePoints = 3;
 	private Animator anim;
 	public static bool isDamageable;
 	Vector3 beginPos;
@@ -18,18 +18,14 @@ public class LifeController : MonoBehaviour
 	AudioSource audio;
 	public AudioClip[] audioClip;
 
-	private float startLifePoints;
+	private float startLifePoints = 3;
 	public Text messageText;
 	private bool gameOver;
 	private PlayerController playerController;
 	public GameObject particlesGameOver;
 
 	void Start()
-	{ 	
-		 startLifePoints = 3;
-		maxHealth = 4;
-		startHealth = 5;
-		lifePoints = 3;
+	{
 		health = startHealth;
 		isDamageable = true;
 		anim = GetComponent<Animator>();
@@ -37,7 +33,7 @@ public class LifeController : MonoBehaviour
 		audio = GetComponent<AudioSource>();
 		UpdateView();
 
-		if (SceneManager.GetActiveScene().name == "FirstStage")
+		if (SceneManager.GetActiveScene().buildIndex == 1)
 		{ //Application.loadedLevel == 1
 			health = startHealth;
 			lifePoints = startLifePoints;
