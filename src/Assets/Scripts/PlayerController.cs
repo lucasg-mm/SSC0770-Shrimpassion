@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour {
 		MovementState state;
 
 		// running
-		if(horizontalForceButton > 0f){
+		if(horizontalForceButton > 0f){	
 			state = MovementState.running;
 		}
 		else if(horizontalForceButton < 0f){
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		// jumping
-		if(rb2d.velocity.y > .1f && !isGrounded){
+		if(rb2d.velocity.y > .1f){
 			state = MovementState.jumping;
 		}
 
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		// shooting and jumping
-		if (isAttacking && rb2d.velocity.y > .1f && !isGrounded)
+		if (isAttacking && rb2d.velocity.y > .1f)
 		{
 			state = MovementState.shooting_jumping;
 		}
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour {
 		horizontalForceButton = Input.GetAxis ("Horizontal");
 
 		rb2d.velocity = new Vector2 (horizontalForceButton * speed, rb2d.velocity.y);
-		isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.15f, whatIsGround);
+		isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.85f, whatIsGround);
 		anim.SetBool("grounded",isGrounded);
 		if ((horizontalForceButton > 0 && !lookingRight) || (horizontalForceButton < 0 && lookingRight))
 			Flip ();
