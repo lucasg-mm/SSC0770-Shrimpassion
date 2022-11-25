@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Ground
   - Enemies
-  - 
+  - Terrain
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 93020529
+    locked: 0
+  - name: UI
+    uniqueID: 3551195075
     locked: 0

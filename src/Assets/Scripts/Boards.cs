@@ -7,7 +7,7 @@ public class Boards : MonoBehaviour
 
     public Transform  poPlayer;
     public Transform  leftLimit;
-    public Transform righttLimit;
+    public Transform rightLimit;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class Boards : MonoBehaviour
     void Update()
     {
 
-        if (poPlayer.position.x >= righttLimit.position.x || poPlayer.position.x < leftLimit.position.x)
+        if (poPlayer.position.x >= rightLimit.position.x || poPlayer.position.x < leftLimit.position.x)
         {
 
             poPlayer.transform.position = new Vector3(leftLimit.position.x, poPlayer.position.y, poPlayer.position.z);
