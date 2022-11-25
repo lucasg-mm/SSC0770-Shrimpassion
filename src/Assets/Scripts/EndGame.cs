@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FinishLevel : MonoBehaviour
+public class EndGame : MonoBehaviour
 {
     private AudioSource finishSound;
     // Start is called before the first frame update
@@ -12,19 +12,19 @@ public class FinishLevel : MonoBehaviour
         finishSound = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerEnder2D(Collider2D collision)
+    private void OnTriggerEnderGame2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
             Debug.Log("here");
             finishSound.Play();
-            Invoke("CompleteLevel", 2f);
-            CompleteLevel();
+            Invoke("CompleteGame", 2f);
+            CompleteGame();
         }
     }
 
-    private void CompleteLevel()
+    private void CompleteGame()
     {
-        SceneManager.LoadScene("FinalStage");
+        SceneManager.LoadScene("EndGame");
     }
 }
